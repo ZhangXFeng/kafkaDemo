@@ -51,7 +51,8 @@ public class KafkaProducer extends Thread{
 				
 				LOG.info(i);
 				
-				producer.send(new KeyedMessage<String, byte[]>(this.topic, i+"", "test".getBytes()));
+//				producer.send(new KeyedMessage<String, byte[]>(this.topic, i+"", "test".getBytes()));
+				producer.send(new KeyedMessage<String, byte[]>(this.topic, i+"", "32155,5555555,5555555,5,55555,5".getBytes()));
 				i++;
 				Thread.sleep(1000);
 			}
